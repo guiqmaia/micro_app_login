@@ -7,7 +7,7 @@ class LoginPage extends StatelessWidget {
 
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
-
+  final formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +40,9 @@ class LoginPage extends StatelessWidget {
           ),
           DefaultButton(
             onPressed: () {
-              navigatorKey.currentState?.pushNamed('/home');
+              if (formKey.currentState!.validate()) {
+                navigatorKey.currentState?.pushNamed('/home');
+              }
             },
             text: 'Go to Home',
           ),
