@@ -14,7 +14,7 @@ dependencies:
   micro_core:
     git:
       url: https://github.com/guiqmaia/micro_core.git
-      ref: v1.0.2
+      ref: v1.0.3
 
 dev_dependencies:
   flutter_test:
