@@ -42,6 +42,15 @@ class LoginPage extends StatelessWidget {
             onPressed: () {
               if (formKey.currentState!.validate()) {
                 navigatorKey.currentState?.pushNamed('/home');
+              } else {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text(
+                      'Algumas informações estão incorretas',
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                );
               }
             },
             text: 'Go to Home',
