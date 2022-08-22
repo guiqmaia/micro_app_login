@@ -25,7 +25,7 @@ class LoginPage extends StatelessWidget {
             },
           ),
           TextFormField(
-            controller: emailController,
+            controller: passwordController,
             decoration: const InputDecoration(hintText: 'Digite sua senha'),
             validator: (value) {
               if (value!.length < 8) {
